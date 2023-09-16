@@ -1,44 +1,27 @@
-﻿@model IEnumerable<Parametri> 
+﻿
 @{
     ViewData["Title"] = "Pad napona";
+    
 }
 <h1>@ViewData["Title"]</h1>
 
-<form >
-    <div class="border p-3 mt-4">
-        <div class="row pb-2">
-            <h2 class="text-primary">Izračunaj pad napona</h2>
-        </div>
+<form method="post" action="@Url.Action("Racunaj", "ParametriController")" >
 
-        <div method="get" class="mb-3">
-            <label >Površina presjeka</label>
-            <input class="form-control" />
-            @*<span asp-validation-for="povrsina_presjeka" class="text-danger"></span>*@
-        </div>
-        <div class="mb-3">
-            <label>Snaga</label>
-            <input class="form-control" />
-            @*<span asp-validation-for="naziv" class="text-danger"></span>*@
-        </div>
-        <div class="mb-3">
-            <label>Dužina</label>
-            <input class="form-control" />
-            @*<span asp-validation-for="naziv" class="text-danger"></span>*@
-        </div>
-        <div class="mb-3">
-            <label >Napon</label>
-            <input class="form-control" />
-            @*<span asp-validation-for="naziv" class="text-danger"></span>*@
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Izračunaj</button>
-        <a asp-controller="Parametri" asp-action="Index"></a>
-        <br /><br />
+    <label for="povrsina">Povrsina:</label><br>
+    <input type="text" name="povrsina"><br>
 
-        <div class="mb-3">
-            <label>Pad Napona</label>
-            <input class="form-control" />
-            @*<span asp-validation-for="naziv" class="text-danger"></span>*@
-        </div>
+    <label for="snaga">Snaga:</label><br>
+    <input type="text" name="snaga"><br>
 
-       </div>
+    <label for="duzina">Duzina:</label><br>
+    <input type="text" name="duzina"><br>
+
+    <label for="napon">Napon:</label><br>
+    <input type="text" name="napon"><br>
+
+    <input type="submit" value="Izracunaj">
+
+    <p>@ViewBag.padNapona<p>
+
 </form>
+

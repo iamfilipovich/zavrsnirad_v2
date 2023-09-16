@@ -12,4 +12,5 @@ public class ApplicationDbContext : DbContext
 
     public DbSet<Parametri> Parametri { get; set; }
     public DbSet<Elektricnielementi> Elektricnielementi { get; set; }
+    
 }
