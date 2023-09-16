@@ -1,0 +1,31 @@
+﻿@model Elektricnielementi
+
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Izbriši element</h2>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="naziv"></label>
+            <input asp-for="naziv" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="opis"></label>
+            <input asp-for="opis" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="karakteristike"></label>
+            <input asp-for="karakteristike" disabled class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label asp-for="podaci"></label>
+            <input asp-for="podaci" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Izbriši</button>
+        <a asp-controller="Elektricnielementi" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Povratak
+        </a>
+    </div>
+</form>

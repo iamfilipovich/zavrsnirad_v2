@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Elektricnielementi>
+@{
+    ViewData["Title"] = "Električni elementi";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Električni elementi</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Elektricnielementi" asp-action="Create" class="btn btn-primary">
+                Kreiraj novi element
+            </a>
+        </div>
+    </div>
+</div>
+<br /><br />
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Naziv
+            </th>
+            <th>
+                Opis
+            </th>
+            <th>
+                Karakteristike
+            </th>
+            <th>
+                Podaci
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="auto">
+                    @obj.Id
+                </td>
+                <td width="auto%">
+                    @obj.naziv
+                </td>
+                <td width="auto%">
+                    @obj.opis
+                </td>
+                <td width="auto%">
+                    @obj.karakteristike
+                </td>
+                <td width="auto%">
+                    @obj.podaci
+                </td>
+                <td>
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Elektricnielementi" asp-action="Edit" asp-route-id="@obj.Id"
+                        class="btn btn-primary mx-2">Uredi</a>
+                        <a asp-controller="Elektricnielementi" asp-action="Delete" asp-route-id="@obj.Id"
+                           class="btn btn-danger mx-2">Izbriši</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

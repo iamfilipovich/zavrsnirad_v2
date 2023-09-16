@@ -1,0 +1,34 @@
+﻿@model Elektricnielementi
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Uredi element</h2>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="naziv"></label>
+            <input asp-for="naziv" class="form-control" />
+            <span asp-validation-for="naziv" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="opis"></label>
+            <input asp-for="opis" class="form-control" />
+            <span asp-validation-for="opis" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="karakteristike"></label>
+            <input asp-for="karakteristike" class="form-control" />
+            <span asp-validation-for="karakteristike" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="podaci"></label>
+            <input asp-for="podaci" class="form-control" />
+            <span asp-validation-for="podaci" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Edit</button>
+        <a asp-controller="Elektricnielementi" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Povratak
+        </a>
+    </div>
+</form>
