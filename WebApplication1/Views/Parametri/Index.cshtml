@@ -7,41 +7,26 @@
         </div>
 
         <div class="mb-3">
-            <label for="povrsina">Površina:</label>
+            <label for="povrsina">Površina poprečnog presjeka [mm2]:</label>
             <input type="text" name="povrsina" class="form-control" />
         </div>
 
         <div class="mb-3">
-            <label for="snaga">Snaga:</label>
+            <label for="snaga">Snaga [kW]:</label>
             <input type="text" name="snaga" class="form-control" />
         </div>
 
         <div class="mb-3">
-            <label for="duzina">Dužina:</label>
+            <label for="duzina">Dužina kabela [m]:</label>
             <input type="text" name="duzina" class="form-control" />
         </div>
 
         <div class="mb-3">
-            <label for="napon">Napon:</label>
+            <label for="napon">Napon [V]:</label>
             <input type="text" name="napon" class="form-control" />
         </div>
 
         <button type="submit" class="btn btn-primary" style="width:150px" value="Izracunaj">Izračunaj</button>
-        
-        @*<label for="povrsina">Povrsina:</label><br>
-        <input type="text" name="povrsina"><br>
-
-        <label for="snaga">Snaga:</label><br>
-        <input type="text" name="snaga"><br>
-
-        <label for="duzina">Duzina:</label><br>
-        <input type="text" name="duzina"><br>
-
-        <label for="napon">Napon:</label><br>
-        <input type="text" name="napon"><br>
-        <br /><br />
-        <input type="submit" value="Izracunaj">*@
-
 
         @if (ViewData.ContainsKey("WarningMessage"))
         {
@@ -51,9 +36,14 @@
         }
         <br /><br />
         <div class="row pb-2">
-            <h2 class="text-primary">Pad Napona: @ViewData["PadNapona"]</h2>
+            <h2 class="text-primary">Pad Napona: @ViewData["PadNapona"] %</h2>
         </div>
-        
+
+        <img src="~/css/trofazna.png" >
+        <p>Formula po kojoj se računa pad napona trofazne struje</p>
+        <br />
+        <img src="~/css/monofazna.png" alt="Formula po kojoj se računa pad napona monofazne struje">
+        <p>Formula po kojoj se računa pad napona monofazne struje</p>
     </div>
 </form>
 

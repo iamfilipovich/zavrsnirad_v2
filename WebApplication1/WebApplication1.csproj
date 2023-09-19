@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="C:\Users\iamfilipovich\source\repos\WebApplication1\WebApplication1\Images" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 
