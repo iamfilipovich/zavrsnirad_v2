@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Parametri>
+﻿@model Parametri
 
 <form method="post" asp-action="HandleButtonClick">
     <div class="border p-3 mt-4">
@@ -27,7 +27,7 @@
         </div>
 
         <button type="submit" class="btn btn-primary" style="width:150px" value="Izracunaj">Izračunaj</button>
-        
+
         @*<label for="povrsina">Povrsina:</label><br>
         <input type="text" name="povrsina"><br>
 
@@ -49,11 +49,11 @@
                 @ViewData["WarningMessage"]
             </div>
         }
-        <br /><br />
-        <div class="row pb-2">
-            <h2 class="text-primary">Pad Napona: @ViewData["PadNapona"]</h2>
+
+        <div class="mb-3">
+            <label for="padNapona">Pad napona:</label>
+            <input type="text" name="padNapona" class="form-control " />
         </div>
-        
     </div>
 </form>
 
