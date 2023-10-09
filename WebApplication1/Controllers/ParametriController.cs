@@ -29,7 +29,6 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult HandleButtonClick()
         {
-
             var povrsina = Convert.ToDouble(Request.Form["povrsina"]);
             var otpor = _db.Parametri.Where(e => e.povrsina_presjeka == povrsina).Select(e => e.otpor_vodica).FirstOrDefault();
             var snaga = Convert.ToInt32(Request.Form["snaga"]);
